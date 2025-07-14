@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Task Tracker</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>[] Mini Task Tracker App</h1>
+
+  <div id="adminPanel"></div>
+
+  <form id="taskForm">
+    <input type="hidden" id="task_id">
+
+    <label>Task Serial No (Auto):</label>
+    <input type="text" id="task_serial" disabled><br>
+
+    <label>Task Short Name:</label>
+    <input type="text" id="short_name" required><br>
+
+    <label>Task Details:</label>
+    <textarea id="details" required></textarea><br>
+
+    <label>Task Owner:</label>
+    <select id="owner" required>
+      <option value="">--Select Owner--</option>
+      <option value="Ramkrishna Das">Ramkrishna Das</option>
+      <option value="Soham Pandey">Soham Pandey</option>
+      <option value="Abhisan Paul">Abhisan Paul</option>
+      <option value="Payel Ghosh">Payel Ghosh</option>
+      <option value="Sayak Das">Sayak Das</option>
+    </select><br>
+
+    <label>Task Create Date:</label>
+    <input type="text" id="created_date" disabled><br>
+
+    <label>Task Due Date:</label>
+    <input type="date" id="due_date" required><br>
+
+    <button type="submit" id="addBtn">Add Task</button>
+    <button type="button" id="updateBtn" style="display:none;">Update Task</button>
+  </form>
+
+  <h2>📋 Task List</h2>
+  <ul id="taskList"></ul>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
